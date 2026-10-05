@@ -1,0 +1,15 @@
+{
+  "repository": "report-export-kit",
+  "title": "Report Export Kit · 结构化报告导出工具",
+  "description": "Export one structured report to bilingual PDF, editable Word and Markdown, with tables, PNG charts, references and version hashes. Runs locally without AI or keys. 同一份结构化内容本地导出中英文 PDF、Word、Markdown，保留表格、图表、来源与版本。",
+  "license": "MIT",
+  "visibility": "public",
+  "topics": [
+    "pdf",
+    "docx",
+    "markdown",
+    "report-generation",
+    "agent-tools",
+    "local-first"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Weekly notes / 每周笔记",
+  "version": 1,
+  "subtitle": "Synthetic starter / 虚构入门样例",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Findings / 发现"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is synthetic content. / 这是虚构内容，请替换成自己核对的资料。"
+    },
+    {
+      "type": "table",
+      "title": "Synthetic observations / 虚构观测",
+      "headers": [
+        "Period / 期间",
+        "Value / 数值",
+        "Unit / 单位"
+      ],
+      "rows": [
+        [
+          "2025",
+          12,
+          "demo units / 示例单位"
+        ]
+      ],
+      "note": "All numbers are invented. / 所有数值为虚构。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Example source / 示例来源",
+      "url": "https://example.org/data"
+    }
+  ]
+}

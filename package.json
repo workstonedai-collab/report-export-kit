@@ -1,0 +1,56 @@
+{
+  "name": "report-export-kit",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "exports": "./src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/index.js",
+    "demo": "node examples/demo.js",
+    "setup-font": "node scripts/setup-font.js",
+    "export": "node src/cli.js"
+  },
+  "dependencies": {
+    "pdfkit": "0.20.2",
+    "jszip": "3.10.2"
+  },
+  "files": [
+    "src",
+    "docs",
+    "examples",
+    "README.md",
+    "README.zh-CN.md",
+    "fonts",
+    "scripts",
+    "THIRD-PARTY-NOTICES.md",
+    "CONTRIBUTING.md",
+    "AGENTS.md",
+    "test",
+    "LICENSE"
+  ],
+  "description": "Export one structured report to bilingual PDF, editable Word and Markdown, with tables, PNG charts, references and version hashes. Runs locally without AI or keys. 同一份结构化内容本地导出中英文 PDF、Word、Markdown，保留表格、图表、来源与版本。",
+  "bin": {
+    "report-export": "./src/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/workstonedai-collab/report-export-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/workstonedai-collab/report-export-kit/issues"
+  },
+  "homepage": "https://github.com/workstonedai-collab/report-export-kit#readme",
+  "keywords": [
+    "pdf",
+    "docx",
+    "markdown",
+    "report-generation",
+    "agent-tools",
+    "local-first"
+  ]
+}
