@@ -5,6 +5,7 @@ import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import PDFDocument from "pdfkit";
 import JSZip from "jszip";
+export { exportRecordWorkbook } from './records.js';
 
 const text = (v) =>
   typeof v === "string"
