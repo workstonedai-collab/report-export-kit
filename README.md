@@ -1,5 +1,15 @@
 # Report Export Kit · 结构化报告导出工具
 
+New: `exportRecordWorkbook(records)` exports a supplied versioned snapshot to
+XLSX (Records, Fields, Manifest). Each record needs `id`, `version`, and a JSON
+`fields` object; optional `source` is caller-provided text. Run
+`node examples/records.js` for a fictional long-text example. All user cells are
+text, including `=` prefixes. Long fields split into ordered parts with JSON
+Pointer paths; join them by record/version/path and numeric Part. No fetching or
+latest-version substitution occurs. Limits: 1000 records, 50000 field parts,
+10 MB input. Invalid XML characters are rejected. Output contains your supplied
+data. This record API is separate from the three report-rendering formats below.
+
 [English](README.md) · [简体中文](README.zh-CN.md)
 
 [![CI](https://github.com/workstonedai-collab/report-export-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/workstonedai-collab/report-export-kit/actions/workflows/ci.yml) · [MIT](LICENSE) · Node.js 22.12+
