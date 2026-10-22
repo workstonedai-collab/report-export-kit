@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import PDFDocument from "pdfkit";
 import JSZip from "jszip";
 export { exportRecordWorkbook } from './records.js';
+export * from './video/index.js';
 
 const text = (v) =>
   typeof v === "string"

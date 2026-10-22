@@ -16,3 +16,26 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run demo
+
+  video-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+      - name: Install test-only Chromium
+        run: npx playwright-core install --with-deps chromium
+      - name: Configure video test environment
+        run: |
+          node --input-type=module -e 'import{chromium}from"playwright-core";console.log("REPORT_VIDEO_TEST_CHROME="+chromium.executablePath())' >>"$GITHUB_ENV"
+          echo "REPORT_VIDEO_TEST_FFMPEG=/usr/bin/ffmpeg" >>"$GITHUB_ENV"
+      - run: node --test test/video-browser.test.js
+      - run: npm run demo:video

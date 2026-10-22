@@ -12,6 +12,17 @@
 
 ![工具实际生成的双语虚构报告](docs/report-preview.png)
 
+## 视频扩展候选版
+
+v0.2.0 候选分支新增一条独立的本地视频流水线，可生成静态报告幻灯片、离线 HTML 编辑器以及 MP4/SRT/VTT。它不改变现有 PDF、DOCX、Markdown 或记录 XLSX API，`exportReport` 也不接受 `video`。此候选版尚未发布到 npm，也尚未公开发行。
+
+```sh
+npm run demo:video
+node src/video/cli.js render output/video/project.json output/video/film.mp4
+```
+
+安装要求、限制、命令行用法与验证说明见[视频扩展指南](docs/video.zh-CN.md)或 [English video guide](docs/video.en.md)。
+
 ## 新增示例
 
 新增 `exportRecordWorkbook(records)`：将传入的固定版本快照导出为 XLSX，含
