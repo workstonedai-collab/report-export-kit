@@ -1,23 +1,30 @@
 {
   "name": "report-export-kit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "license": "MIT",
   "type": "module",
   "engines": {
     "node": ">=22.12"
   },
-  "exports": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./video": "./src/video/index.js"
+  },
   "scripts": {
     "test": "node --test",
     "check": "node --check src/index.js",
     "demo": "node examples/demo.js",
+    "demo:video": "node examples/video.js",
     "setup-font": "node scripts/setup-font.js",
     "export": "node src/cli.js"
   },
   "dependencies": {
     "pdfkit": "0.20.2",
     "jszip": "3.10.2"
+  },
+  "optionalDependencies": {
+    "playwright-core": "1.64.1"
   },
   "files": [
     "src",
@@ -33,9 +40,10 @@
     "test",
     "LICENSE"
   ],
-  "description": "Export one structured report to bilingual PDF, editable Word and Markdown, with tables, PNG charts, references and version hashes. Runs locally without AI or keys. 同一份结构化内容本地导出中英文 PDF、Word、Markdown，保留表格、图表、来源与版本。",
+  "description": "Export structured reports locally to bilingual PDF, editable Word, Markdown, and editable video, with tables, PNG charts, references and version hashes; no AI or keys required. 本地导出双语 PDF、可编辑 Word、Markdown 与可编辑视频，保留表格、图表、来源和版本，无需 AI 或密钥。",
   "bin": {
-    "report-export": "./src/cli.js"
+    "report-export": "./src/cli.js",
+    "report-video": "./src/video/cli.js"
   },
   "repository": {
     "type": "git",
@@ -49,6 +57,7 @@
     "pdf",
     "docx",
     "markdown",
+    "video",
     "report-generation",
     "agent-tools",
     "local-first"

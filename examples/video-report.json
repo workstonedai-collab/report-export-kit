@@ -1,0 +1,14 @@
+{
+  "title": "区域试点摘要 / Regional Pilot Summary",
+  "subtitle": "完全虚构的本地演示 / Entirely fictional local demo",
+  "version": 1,
+  "blocks": [
+    { "type": "heading", "level": 1, "text": "执行概览 / Execution Overview" },
+    { "type": "paragraph", "text": "本示例展示三个虚构阶段的进度。所有数字仅用于演示视频工作流，不对应任何真实地区、机构或业务结果。This example illustrates three fictional stages. All values are synthetic and do not represent real regions, organizations, or outcomes." },
+    { "type": "table", "title": "虚构阶段数据 / Synthetic stage data", "headers": ["阶段 / Stage", "合成指标 / Synthetic metric", "状态 / Status"], "rows": [["准备 / Prepare", "12", "完成 / Done"], ["试点 / Pilot", "18", "模拟 / Simulated"], ["复核 / Review", "15", "示例 / Example"]], "note": "数值经过虚构设计，仅供排版测试。Values are fictional and provided only for layout testing." },
+    { "type": "paragraph", "text": "数据来源为虚构示例站点：https://example.org/reports/video-sample（无真实报告内容）。Source is a fictional example URL containing no real report data." }
+  ],
+  "sources": [
+    { "title": "Fictional example source / 虚构示例来源", "url": "https://example.org/reports/video-sample", "publisher": "Example Organization / 示例组织", "date": "2026-01-01" }
+  ]
+}
