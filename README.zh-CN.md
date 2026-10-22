@@ -1,13 +1,5 @@
 # Report Export Kit · 结构化报告导出工具
 
-新增 `exportRecordWorkbook(records)`：将传入的固定版本快照导出为 XLSX，含
-Records、Fields、Manifest 三张表。每条需要 `id`、`version` 和 JSON `fields`
-对象，可选 `source` 来源文字。运行 `node examples/records.js` 体验虚构长文。
-用户单元格始终按文本写入，包括 `=` 开头的内容；长字段按顺序分片，保留 JSON
-Pointer 路径，以记录 ID、版本、路径和数字 Part 拼回全文。不联网，也不替换成
-最新记录。上限为 1000 条、50000 个字段分片、10 MB 输入；不支持的 XML 字符
-明确拒绝。文件会包含你提供的资料，需自行保护。此记录导出接口独立于下方三种报告格式。
-
 [English](README.md) · [简体中文](README.zh-CN.md)
 
 [![CI](https://github.com/workstonedai-collab/report-export-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/workstonedai-collab/report-export-kit/actions/workflows/ci.yml) · [MIT](LICENSE) · Node.js 22.12+
@@ -19,6 +11,16 @@ Pointer 路径，以记录 ID、版本、路径和数字 Part 拼回全文。不
 无需模型、账户或密钥。渲染器不会读取来源网址，也不会把报告内容发送到服务端。
 
 ![工具实际生成的双语虚构报告](docs/report-preview.png)
+
+## 新增示例
+
+新增 `exportRecordWorkbook(records)`：将传入的固定版本快照导出为 XLSX，含
+Records、Fields、Manifest 三张表。每条需要 `id`、`version` 和 JSON `fields`
+对象，可选 `source` 来源文字。运行 `node examples/records.js` 体验虚构长文。
+用户单元格始终按文本写入，包括 `=` 开头的内容；长字段按顺序分片，保留 JSON
+Pointer 路径，以记录 ID、版本、路径和数字 Part 拼回全文。不联网，也不替换成
+最新记录。上限为 1000 条、50000 个字段分片、10 MB 输入；不支持的 XML 字符
+明确拒绝。文件会包含你提供的资料，需自行保护。此记录导出接口独立于下方三种报告格式。
 
 ## 阅读导航
 
